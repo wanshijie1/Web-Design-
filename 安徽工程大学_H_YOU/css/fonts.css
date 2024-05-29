@@ -1,0 +1,25 @@
+@font-face {
+    font-family: CustomFont1;
+    src: url('../fonts/baige.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: CustomFont2;
+    src: url('path/to/font2.ttf') format('truetype');
+}
+
+#services h3 {
+    font-family: CustomFont1, CustomFont2, Arial, sans-serif;
+}
+
+#team h3 {
+    font-family: CustomFont1, CustomFont2, Arial, sans-serif;
+}
+
+#gallery h3 {
+    font-family: CustomFont1, CustomFont2, Arial, sans-serif;
+}
+
+#about h3 {
+    font-family: CustomFont1, CustomFont2, Arial, sans-serif;
+}
