@@ -1,0 +1,80 @@
+/* 
+ * 	Owl Carousel 核心 CSS 文件
+ *	v1.3.3
+ */
+
+/* 清除浮动 */
+.owl-carousel .owl-wrapper:after {
+	content: ".";
+	display: block;
+	clear: both;
+	visibility: hidden;
+	line-height: 0;
+	height: 0;
+}
+
+/* 初始化前隐藏 */
+.owl-carousel {
+	position: relative;
+	width: 100%;
+	-ms-touch-action: pan-y;
+}
+
+/* Owl Carousel Wrapper 样式 */
+.owl-carousel .owl-wrapper {
+	position: relative;
+	-webkit-transform: translate3d(0px, 0px, 0px);
+}
+
+/* Owl Carousel Wrapper 外部容器样式 */
+.owl-carousel .owl-wrapper-outer {
+	overflow: hidden;
+	position: relative;
+	width: 100%;
+}
+
+/* 自动高度过渡效果 */
+.owl-carousel .owl-wrapper-outer.autoHeight {
+	-webkit-transition: height 500ms ease-in-out;
+	-moz-transition: height 500ms ease-in-out;
+	-ms-transition: height 500ms ease-in-out;
+	-o-transition: height 500ms ease-in-out;
+	transition: height 500ms ease-in-out;
+}
+
+/* 每个轮播项浮动到左侧 */
+.owl-carousel .owl-item {
+	float: left;
+}
+
+/* 页面导航和控制按钮鼠标指针样式 */
+.owl-controls .owl-page,
+.owl-controls .owl-buttons div {
+	cursor: pointer;
+}
+
+/* 禁止用户选择控制按钮和导航 */
+.owl-controls {
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+/* 鼠标抓取图标 */
+.grabbing {
+	cursor: url(grabbing.png) 8 8, move;
+}
+
+/* 修复浏览器兼容性问题 */
+.owl-carousel .owl-wrapper,
+.owl-carousel .owl-item {
+	-webkit-backface-visibility: hidden;
+	-moz-backface-visibility: hidden;
+	-ms-backface-visibility: hidden;
+	-webkit-transform: translate3d(0, 0, 0);
+	-moz-transform: translate3d(0, 0, 0);
+	-ms-transform: translate3d(0, 0, 0);
+}

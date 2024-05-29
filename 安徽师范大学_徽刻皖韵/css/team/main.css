@@ -1,0 +1,421 @@
+/* 导入字体文件 */
+@font-face {
+    font-family: 'CustomFont'; /* 定义字体族名称为CustomFont */
+    src: url('../../fonts/字魂镇魂手书.ttf') format('truetype'); /* 指定字体文件路径和格式 */
+}
+/* =============================================
+            General Style
+/* ============================================= */
+
+/* Owl Carousel按钮样式 */
+.owl-buttons > div {
+    border-radius: 50%; /* 设置按钮的圆角 */
+    -moz-border-radius: 50%; /* 兼容Mozilla浏览器的圆角设置 */
+    -webkit-border-radius: 50%; /* 兼容Webkit内核浏览器的圆角设置 */
+    color: #000; /* 文字颜色 */
+    font-size: 18px; /* 字体大小 */
+    height: 80px; /* 按钮高度 */
+    line-height: 1.2; /* 行高 */
+    padding: 20px 25px; /* 内边距 */
+    text-transform: uppercase; /* 文字大写 */
+    width: 80px; /* 按钮宽度 */
+    word-break: break-all; /* 文字换行 */
+    border: 2px solid; /* 边框 */
+    position: relative; /* 相对定位 */
+    color: #8283a7; /* 文字颜色 */
+}
+.owl-buttons {
+    position: absolute; /* 绝对定位 */
+    top: 50%; /* 顶部位置为50% */
+}
+.owl-buttons .owl-prev{
+    left: -60px; /* 向左移动60px */
+    top: -47px; /* 向上移动47px */
+}
+.owl-buttons .owl-next {
+    left: 1152px; /* 向左移动1152px */
+    top: -126px; /* 向上移动126px */
+}
+.owl-buttons > div:before{
+    position: absolute; /* 绝对定位 */
+    font-family: FontAwesome; /* 字体库 */
+    font-size: 24px; /* 字体大小 */
+    color: #8283a7; /* 字体颜色 */
+}
+.owl-buttons .owl-prev:before{
+    right: 100%; /* 向右移动100% */
+    top: 30%; /* 向上移动30% */
+    content: '\f177'; /* FontAwesome内容 */
+}
+.owl-buttons .owl-next:before{
+    left: 100%; /* 向左移动100% */
+    top: 30%; /* 向上移动30% */
+    content: '\f178'; /* FontAwesome内容 */
+}
+.owl-theme .owl-controls .owl-page.active span {
+    height: 40px; /* 高度为40px */
+    background: #8283a7; /* 背景色 */
+}
+.index5 .owl-prev, .index6 .owl-prev{
+    display: none; /* 隐藏前一页按钮 */
+}
+.index5 .owl-next, .index6 .owl-next{
+    display: none; /* 隐藏后一页按钮 */
+}
+/* =============================================
+            Team Style
+/* ============================================= */
+#team {
+    z-index: 100; /* 层级顺序 */
+    padding-bottom: 0; /* 下内边距为0 */
+    margin-top: 44px; /* 上外边距为44px */
+}
+
+.team-member {
+    text-align: unset; /* 取消文本对齐 */
+    margin-bottom: 20px; /* 下外边距为20px */
+    vertical-align: top; /* 垂直对齐顶部 */
+}
+
+.team-member img {
+    margin: 0 auto; /* 居中对齐 */
+    border: 7px solid white; /* 白色边框 */
+    width: 225px; /* 固定宽度，您可以根据需要调整 */
+    height: 345px; /* 固定高度，您可以根据需要调整 */
+    object-fit: cover; /* 保持图像比例，裁剪多余部分 */
+}
+
+.team-member h4 {
+    margin-top: 5px; /* 上外边距为5px */
+    margin-bottom: 0; /* 下外边距为0 */
+    text-transform: none; /* 无文字变形 */
+}
+
+.list-inline > li {
+    padding: 0; /* 内边距为0 */
+}
+
+ul.social-buttons li a:hover i {
+    opacity: 1; /* 悬停时不透明度为1 */
+    color: #366cff;
+}
+
+.icon-addon.addon-md .form-control,
+.icon-addon .form-control {
+    padding-left: 20px; /* 左内边距为20px */
+    float: left; /* 左浮动 */
+    font-weight: normal; /* 正常字体粗细 */
+    border-radius: 1px; /* 边框圆角 */
+    width: 100%; /* 宽度为100% */
+    height: 50px; /* 高度为50px */
+    text-transform: uppercase; /* 文字大写 */
+    color: #0040ed; /* 文字颜色 */
+}
+
+#team .owl-carousel .owl-prev {
+    left: -95px; /* 向左移动95px */
+    top: 10px; /* 向上移动10px */
+}
+
+#team .owl-carousel .owl-next {
+    left: 1187px; /* 向左移动1187px */
+    top: -70px; /* 向上移动70px */
+}
+
+/* 自定义字体大小和颜色 */
+@font-face {
+    font-family: 'CustomFont';
+    src: url('') format('truetype'); /* 引入自定义字体 */
+}
+
+/* 使用自定义字体 */
+#team h4 {
+    font-family: 'CustomFont', Arial, sans-serif;
+    font-size: 60px; /* 自定义标题字体大小 */
+    color: #333333; /* 自定义标题字体颜色 */
+    text-align: center; /* 设置文本居中 */
+    margin-top: -88px; /* 调整顶部外边距 */
+}
+
+#team h2 {
+    font-family: 'CustomFont', Arial, sans-serif;
+    font-size: 150px; /* 自定义标题字体大小 */
+    color: #ff0000; /* 自定义标题字体颜色 */
+    text-align: center; /* 设置文本右对齐 */
+    margin-bottom: 20px; /* 调整底部外边距 */
+}
+
+#team p {
+    font-family: 'CustomFont', Arial, sans-serif;
+    font-size: 16px; /* 自定义段落字体大小 */
+    color: #666666; /* 自定义段落字体颜色 */
+    text-align: left; /* 设置文本左对齐 */
+    margin: 10px 0; /* 调整上下外边距 */
+}
+
+#team h3 {
+    font-family: 'CustomFont', Arial, sans-serif;
+    font-size: 50px; /* 自定义 h3 标题字体大小 */
+    color: #0044cc; /* 自定义 h3 标题字体颜色 */
+    text-align: center; /* 设置文本居中 */
+    margin-top: 15px; /* 调整顶部外边距 */
+}
+
+
+/* =============================================
+            Contact Form Style
+/* ============================================= */
+input.pcl::-webkit-input-placeholder {
+    color: #282c37; /* 占位符颜色 */
+    font-size: 16px; /* 字体大小 */
+}
+input.pcl:-moz-placeholder {
+    color: #282c37; /* 占位符颜色 */
+    font-size: 16px; /* 字体大小 */
+}
+input.pcl::-moz-placeholder {
+    color: #282c37; /* 占位符颜色 */
+    font-size: 16px; /* 字体大小 */
+}
+input.pcl:-ms-input-placeholder {
+    color: #282c37; /* 占位符颜色 */
+    font-size: 16px; /* 字体大小 */
+}
+.icon-addon.addon-lg .glyphicon, .icon-addon .glyphicon, .icon-addon.addon-md .fa, .icon-addon .fa {
+    position: absolute; /* 绝对定位 */
+    z-index: 100; /* 层级顺序 */
+    right: 16px; /* 向右移动16px */
+    font-size: 14px; /* 字体大小 */
+    width: 20px; /* 宽度为20px */
+    text-align: center; /* 文本居中 */
+    padding: 10px 0; /* 内边距 */
+    top: 6px; /* 向上移动6px */
+    font-size: 18px; /* 字体大小 */
+    cursor: pointer; /* 鼠标指针 */
+}
+.centered {
+    position: absolute; /* 绝对定位 */
+    top: 0; /* 顶部为0 */
+    left: 0; /* 左侧为0 */
+    right: 0; /* 右侧为0 */
+    bottom: 0; /* 底部为0 */
+    margin: auto; /* 自动边距 */
+}
+.widget .form-group {
+    margin: 0; /* 外边距为0 */
+    position: relative; /* 相对定位 */
+}
+.our-team .owl-item .col-sm-4 {
+    width: 100%; /* 宽度为100% */
+}
+/* =============================================
+            SideBar Style
+/* ============================================= */
+.widget {
+    margin-bottom: 60px; /* 下外边距为60px */
+    min-height: 50px; /* 最小高度为50px */
+}
+.widget h4 {
+    color: #282C38; /* 文字颜色 */
+    position: relative; /* 相对定位 */
+    font-size: 22px; /* 字体大小 */
+    font-weight: bold; /* 字体加粗 */
+    margin-bottom: 50px; /* 下外边距为50px */
+}
+.widget h4:before {
+    content: ''; /* 内容为空 */
+    position: absolute; /* 绝对定位 */
+    width: 80px; /* 宽度为80px */
+    height: 2px; /* 高度为2px */
+    left: 0; /* 左侧为0 */
+    bottom: -12px; /* 底部为-12px */
+    background: #8383A7; /* 背景色 */
+    font-size: 20px; /* 字体大小 */
+}
+.widget .list-unstyled li {
+    font-size: 14px; /* 字体大小 */
+    color: #282c37; /* 文字颜色 */
+    font-family: inherit; /* 继承字体 */
+    margin: 9px 0px; /* 上下外边距为9px */
+    cursor: pointer; /* 鼠标指针 */
+    font-weight: bold; /* 字体加粗 */
+    width: 100%; /* 宽度为100% */
+    position: relative; /* 相对定位 */
+}
+.widget .list-unstyled li:hover {
+    color: #8383A7; /* 悬停时文字颜色 */
+}
+.widget .list-unstyled li p {
+    position: absolute; /* 绝对定位 */
+    right: 0; /* 右侧为0 */
+    top: 0; /* 顶部为0 */
+}
+.tags {
+    width: 100%; /* 宽度为100% */
+    min-height: 130px; /* 最小高度为130px */
+}
+.tag {
+    float: left; /* 左浮动 */
+    border: 1px solid lightgray; /* 灰色边框 */
+    padding: 9px 20px; /* 内边距 */
+    margin: 0px 4px; /* 左右外边距为4px */
+    font-size: 12px; /* 字体大小 */
+    border-radius: 3px; /* 边框圆角 */
+    font-weight: bold; /* 字体加粗 */
+    margin-bottom: 10px; /* 下外边距为10px */
+    transition: all .3s ease; /* 过渡效果 */
+    cursor: pointer; /* 鼠标指针 */
+}
+.tag:hover {
+    background: #8383A7; /* 悬停时背景色 */
+    color: #fff; /* 悬停时文字颜色 */
+}
+.media {
+    margin-bottom: 30px; /* 下外边距为30px */
+}
+.media-left {
+    padding-right: 30px; /* 右内边距为30px */
+}
+#bg_video {
+    position: absolute; /* 绝对定位 */
+    min-width: 100%; /* 最小宽度为100% */
+    left: 0; /* 左侧为0 */
+    top: 0; /* 顶部为0 */
+    min-height: 100%; /* 最小高度为100% */
+    background: transparent url('video/poster.jpg') no-repeat 0 0; /* 背景图设置 */
+    background-size: cover; /* 背景图覆盖 */
+}
+.control {
+    width: 120px; /* 宽度为120px */
+    height: 120px; /* 高度为120px */
+    background: transparent; /* 背景透明 */
+    border-radius: 50%; /* 边框圆角 */
+}
+.pp {
+    width: 60px; /* 宽度为60px */
+    height: 60px; /* 高度为60px */
+    border-radius: 50%; /* 边框圆角 */
+}
+.pp i {
+    font-size: 30px; /* 字体大小 */
+    display: inline-block; /* 行内块 */
+    background: #282c37; /* 背景色 */
+    border-radius: 50%; /* 边框圆角 */
+    cursor: pointer; /* 鼠标指针 */
+}
+.icon-pause {
+    width: 60px; /* 宽度为60px */
+    height: 60px; /* 高度为60px */
+    padding: 15px; /* 内边距 */
+    padding-left: 17px; /* 左内边距为17px */
+    color: #CEC5C0; /* 文字颜色 */
+}
+.icon-play {
+    padding-top: 15px; /* 上内边距为15px */
+    padding-left: 21px; /* 左内边距为21px */
+    padding-right: 15px; /* 右内边距为15px */
+    padding-bottom: 14px; /* 下内边距为14px */
+    width: 60px; /* 宽度为60px */
+    height: 60px; /* 高度为60px */
+    color: #CEC5C0; /* 文字颜色 */
+}
+.pp .icon-pause {
+    display: none; /* 隐藏暂停图标 */
+}
+.pp.ppc .icon-pause {
+    display: block; /* 显示暂停图标 */
+}
+.pp.ppc .icon-play {
+    display: none; /* 隐藏播放图标 */
+}
+.blog_video {
+    position: relative; /* 相对定位 */
+    background: transparent !important; /* 背景透明 */
+    width: 100%; /* 宽度为100% */
+    height: 420px; /* 高度为420px */
+    overflow: hidden; /* 超出部分隐藏 */
+}
+#bg_video {
+    position: absolute; /* 绝对定位 */
+    min-width: 100%; /* 最小宽度为100% */
+    left: 0; /* 左侧为0 */
+    top: 0; /* 顶部为0 */
+    min-height: 100%; /* 最小高度为100% */
+    background-size: cover; /* 背景覆盖 */
+}
+/*Team Section Styling*/
+.our-team .owl-pagination {
+    display: none; /* 隐藏分页 */
+}
+.our-team .owl-buttons {
+    top: 30%; /* 向上移动30% */
+}
+
+
+/* =============================================
+            Progress Bars Style
+/* ============================================= */
+.why-right {
+    padding: 50px; /* 内边距为50px */
+}
+.why-right .skill .progress{
+    margin-bottom: 50px; /* 下外边距为50px */
+}
+.about-us .why-holder{
+    margin-top: 50px; /* 上外边距为50px */
+}
+#accordion {
+    margin: 20px 0 0; /* 外边距 */
+}
+.panel-default>.panel-heading {
+    border: 1px solid #282c37; /* 边框颜色 */
+    border-radius: 0px; /* 边框圆角 */
+    padding: 0; /* 内边距为0 */
+}
+.panel-title {
+    font-weight: 400; /* 字体粗细 */
+    font-size: 14px; /* 字体大小 */
+}
+.panel-default {
+    border: 1px solid #282c37; /* 边框颜色 */
+}
+.panel-group .panel {
+    border-radius: 0; /* 边框圆角 */
+}
+.accordion-toggle.collapsed, .bg-head a {
+    display: block; /* 块级显示 */
+    padding: 10px 15px; /* 内边距 */
+}
+.panel-title a{
+    display: block; /* 块级显示 */
+    background: #282c37; /* 背景色 */
+    color: #fff; /* 文字颜色 */
+    padding: 10px 15px; /* 内边距 */
+}
+
+/*Team Section*/
+
+.team-member {
+    position: relative; /* 相对定位 */
+}
+#team .team-member .team-hover {
+    background: rgba(236, 12, 12, 2); /* 背景色及透明度 */
+    position: absolute; /* 绝对定位 */
+    width: 96%; /* 宽度为96% */
+    margin: 8px; /* 外边距为8px */
+    height: 97%; /* 高度为97% */
+    border: 1px solid #ffffff; /* 边框颜色 */
+    opacity: 0; /* 初始透明度为0 */
+    transition: all ease 0.5s; /* 过渡效果 */
+    -webkit-transition: all ease 0.5s; /* 兼容Webkit内核 */
+    -moz-transition: all ease 0.5s; /* 兼容Mozilla内核 */
+}
+#team .team-member .team-hover:hover {
+    opacity: 1; /* 悬停时透明度为0.7 */
+}
+#team .team-member .team-hover .team-hover-content {
+    position: absolute; /* 绝对定位 */
+    top: 31%; /* 向上移动31% */
+    left: 0; /* 左侧为0 */
+    right: 0; /* 右侧为0 */
+}

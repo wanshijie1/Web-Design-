@@ -1,0 +1,358 @@
+/* 导入字体文件 */
+@font-face {
+    font-family: 'CustomFont'; /* 定义字体族名称为CustomFont */
+    src: url('jianghu.ttf') format('truetype'); /* 指定字体文件路径和格式 */
+}
+@font-face {
+    font-family: "CustomFont2"; /* 第二个字体文件的自定义字体名称 */
+    src: url('cu.ttf') format('truetype'); /* 第二个字体文件的路径和格式 */
+}
+
+/* 全局设置字体为微软雅黑 */
+body{
+    font-family: 'Microsoft YaHei', sans-serif;
+}
+
+/* 定义带图标的主要图标样式 */
+.mai-icon{
+    background: #38f; /* 背景颜色为蓝色 */
+    color: #fff; /* 字体颜色为白色 */
+    border-radius: 50%; /* 圆形边框 */
+    width: 40px; /* 宽度为40像素 */
+    height: 40px; /* 高度为40像素 */
+    text-align: center; /* 文字居中对齐 */
+    line-height: 40px; /* 行高为40像素 */
+    margin-right: 20px; /* 右边距为20像素 */
+}
+
+/* 导航栏样式 */
+.navbar {
+    margin-bottom: 0; /* 底部外边距为0 */
+    border-bottom: 1px solid #e6e6e6; /* 底部边框颜色 */
+    position: fixed; /* 固定定位，始终悬停在顶部 */
+    top: 0; /* 距离顶部为0 */
+    width: 100%; /* 宽度为100%，填满整个屏幕 */
+    background-color: transparent; /* 背景颜色为透明 */
+    transition: background-color 0.3s; /* 添加过渡效果 */
+    z-index: 1000; /* 确保导航栏位于其他内容的上方 */
+}
+
+/* 用户下拉页面后导航栏的样式 */
+.navbar.scrolled {
+    background-color: rgba(255, 255, 255, 0.5); /* 背景颜色为半透明 */
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1); /* 下拉时添加边框 */
+}
+
+
+
+/* 默认导航栏样式 */
+.navbar-default{
+    background-color: #ffffff; /* 背景颜色为白色 */
+    /* box-shadow: 0px 2px 8px 0px rgba(50,50,50,0.25); */ /* 取消的阴影效果 */
+}
+
+/* 导航栏品牌样式 */
+.navbar-default .navbar-brand {
+    font-size: 50px; /* 字体大小为30像素 */
+    font-weight: bold; /* 字体加粗 */
+    color: #38f; /* 字体颜色为蓝色 */
+    height: 70px; /* 高度为70像素 */
+    line-height: 35px; /* 行高为35像素 */
+    padding:0; /* 内边距为0 */
+}
+
+/* 导航栏链接样式 */
+.navbar-default .navbar-nav>li>a {
+    font-size: 25px; /* 字体大小为16像素 */
+    color: #444; /* 字体颜色为深灰色 */
+    height: 70px; /* 高度为70像素 */
+    line-height: 35px; /* 行高为35像素 */
+}
+
+/* 导航栏链接悬停样式 */
+.navbar-default .navbar-nav>li>a:hover{
+    color: rgb(255, 0, 0); /* 悬停时字体颜色变为蓝色 */
+}
+
+/* 导航栏切换按钮样式 */
+.navbar-toggle{
+    margin-top: 17px; /* 顶部外边距为17像素 */
+}
+
+
+
+/* 横幅样式 */
+.banner {
+    text-align: center; /* 文字居中对齐 */
+    position: relative; /* 设置相对定位，便于内部绝对定位元素的定位 */
+    height: 850px; /* 设置高度为850像素 */
+    font-family: 'CustomFont', sans-serif; /* 应用自定义字体，后备字体为sans-serif */
+    overflow: hidden; /* 隐藏超出内容 */
+    transform: translateY(-5%); /* 垂直居中 */
+    color: #27c44e; /* 设置字体颜色为白色 */
+    padding-top: 70px; /* 确保横幅内容不被导航栏遮挡 */
+}
+
+
+/* 使用伪元素实现背景图片和透明度效果 */
+.banner::before {
+    content: ""; /* 伪元素内容为空 */
+    position: absolute; /* 绝对定位 */
+    top: auto; /* 顶部位置 */
+    left: 00; /* 左边位置 */
+    width: 100%; /* 宽度为100% */
+    height: 100%; /* 高度为100% */
+    background: url(../images/banner.jpg); /* 背景图片 */
+    background-size: cover; /* 背景图片覆盖整个容器 */
+    opacity: 0.9; /* 设置透明度 */
+    z-index: -2; /* 设置层叠顺序，使其位于内容下方 */
+}
+
+/* 滤镜效果 */
+.lvjing {
+    width: 100%; /* 宽度为100% */
+    height: 100%; /* 高度为100% */
+    background: rgba(0, 0, 0, 0.5); /* 背景颜色带有透明度（0.5） */
+    padding: 80px 0; /* 上下内边距为80像素 */
+    top: 20; /* 距离顶部为0 */
+    left: 0; /* 距离左边为0 */
+    z-index: 1; /* 设置较高的层叠顺序，确保覆盖其他内容 */
+}
+
+/* 确保横幅内容位于背景图片和滤镜上层 */
+.banner-content {
+    position: relative; /* 相对定位 */
+    z-index: 8; /* 设置较高的层叠顺序，确保内容位于背景图片和滤镜上方 */
+}
+
+/* 设置标题样式 */
+#bb h1 {
+    margin-top: 80px; /* 设置标题顶部外边距为像素 */
+    margin-bottom: 50px; /* 设置标题底部外边距为25像素 */
+    font-size: 120px; /* 设置标题字体大小为116像素 */
+    text-align: center; /* 设置文本水平居中 */
+    font-family: 'CustomFont', sans-serif; /* 调用同目录下的字体，后备字体为sans-serif */
+    color: #5714148e; /* 设置字体颜色为深灰色 */
+}
+
+/* 设置段落样式 */
+#bb p {
+    font-weight: 400; /* 设置字体正常粗细 */
+    line-height: 80px; /* 设置行高为35像素 */
+    font-size: 60px; /* 设置段落字体大小为60像素 */
+    text-align: center; /* 设置文本水平居中 */
+    font-family: 'CustomFont', sans-serif; /* 调用同目录下的字体，后备字体为sans-serif */
+    color: #333; /* 设置字体颜色为深灰色 */
+}
+
+
+/* 设置图片样式 */
+#home img {
+    margin-top: 1px; /* 设置图片顶部外边距为30像素 */
+    display: inline-block; /* 设置图片为内联块级元素，使其水平排列 */
+}
+/******************************************************************************************************************/
+
+/* 论坛板块样式 */
+#bbs {
+    font-weight: bold; /* 设置字体加粗 */
+    padding: 80px 0; /* 上下内边距为80像素 */
+    text-align: center; /* 文字居中对齐 */
+    font-family: "MyCustomFont", Arial, sans-serif; /* 使用自定义字体，如果不可用则使用 Arial，sans-serif */
+    color: #ff0404; /* 设置字体颜色为深灰色 */
+}
+
+/* 论坛每个子项的样式 */
+#bbs .col-md-4{
+    padding: 15px; /* 内边距为15像素 */
+}
+
+/* 论坛子项悬停样式 */
+#bbs .col-md-4:hover{
+    background: #f1f1f1; /* 悬停时背景颜色为浅灰色 */
+    box-shadow: 1px 1px 4px #5b5a5a; /* 阴影效果 */
+}
+
+/* 论坛链接样式 */
+#bbs a{
+    color: #212121; /* 链接字体颜色为深灰色 */
+    text-decoration: none; /* 去除下划线 */
+}
+
+/* 论坛图片样式 */
+#bbs img{
+    margin: 0 auto; /* 图片居中 */
+}
+
+/* 自定义字体大小和颜色 */
+@font-face {
+    font-family: 'CustomFont2';
+    src: url('cu.ttf') format('truetype'); /* 引入自定义字体 */
+}
+
+/* 使用自定义字体2 */
+#bbs h3 {
+    font-family: 'CustomFont2', Arial, sans-serif;
+}
+
+/* 自定义标题字体大小和颜色 */
+#bbs h3 {
+    font-size: 24px; /* 自定义标题字体大小 */
+    color: #333; /* 自定义标题字体颜色 */
+}
+
+
+
+
+/*******************************************************************************/
+/* HTML5和Bootstrap板块样式 */
+#html5{
+    background: #f8f8f8; /* 背景颜色为浅灰色 */
+}
+
+/* HTML5和Bootstrap通用样式 */
+#html5 , #bootstrap{
+    padding: 80px 0; /* 上下内边距为80像素 */
+}
+
+/* HTML5和Bootstrap标题样式 */
+#html5 h2 , #bootstrap h2{
+    font-weight: bold; /* 字体加粗 */
+    font-size: 45px; /* 设置标题字体大小为116像素 */
+}
+
+/* HTML5和Bootstrap段落样式 */
+#html5 p  , #bootstrap p{
+    font-weight: bold; /* 设置字体加粗 */
+    line-height: 25px; /* 行高为25像素 */
+
+}
+
+/* 课程板块样式 */
+#course{
+    font-weight: bold; /* 设置字体加粗 */
+    background: #f8f8f8; /* 背景颜色为浅灰色 */
+    padding: 80px 0; /* 上下内边距为80像素 */
+    text-align: center; /* 文字居中对齐 */
+}
+
+/* 课程板块标题样式 */
+#course h2{
+    font-weight: bold; /* 字体加粗 */
+    padding-bottom: 60px; /* 底部内边距为60像素 */
+}
+
+/* 课程板块每个子项样式 */
+#course .col-md-3{
+    margin-bottom: 20px; /* 底部外边距为20像素 */
+}
+
+/* 课程内容样式 */
+.course {
+    background: #ffffff; /* 背景颜色为白色 */
+    border: 1px solid #eee; /* 边框颜色为浅灰色 */
+}
+
+/* 课程按钮样式 */
+#course .btn{
+    background: transparent; /* 背景透明 */
+    border: 1px solid #38f; /* 边框颜色为蓝色 */
+    border-radius: 0px; /* 无边框圆角 */
+    color: #38f; /* 字体颜色为蓝色 */
+    margin-top: 20px; /* 顶部外边距为20像素 */
+    margin-bottom: 30px; /* 底部外边距为30像素 */
+    padding: 8px 40px; /* 内边距为8像素上下，40像素左右 */
+    transition: all 0.3s; /* 过渡效果0.3秒 */
+}
+
+/* 课程按钮悬停样式 */
+#course .btn:hover{
+    background: #38f; /* 背景颜色为蓝色 */
+    color: #fff; /* 字体颜色为白色 */
+}
+
+/* 课程图片样式 */
+.course .case-img{
+    width:100%; /* 宽度为100% */
+    height:auto; /* 高度自动 */
+}
+
+/* 应用板块样式 */
+#app{
+    padding: 80px 0; /* 上下内边距为80像素 */
+}
+
+/* 应用板块标题样式 */
+#app h2{
+    font-weight: bold; /* 字体加粗 */
+    padding-bottom: 30px; /* 底部内边距为30像素 */
+}
+
+/* 应用按钮样式 */
+#app .btn{
+    margin: 10px 0; /* 上下外边距为10像素 */
+    background: rgb(64, 210, 177); /* 背景颜色为绿色 */
+    border-color: rgb(64, 210, 177); /* 边框颜色为绿色 */
+    border-radius: 0; /* 无边框圆角 */
+    padding: 6px 30px; /* 内边距为6像素上下，30像素左右 */
+    transition: all 0.3s; /* 过渡效果0.3秒 */
+}
+
+/* 应用按钮悬停样式 */
+#app .btn:hover{
+    background: rgb(44, 142, 120); /* 悬停时背景颜色为深绿色 */
+}
+
+/* 联系我们板块样式 */
+#contact{
+    background: url("#") no-repeat; /* 背景图片不重复 */
+    background-size: cover; /* 背景图片覆盖 */
+    color: #ffffff; /* 字体颜色为白色 */
+}
+
+/* 联系我们板块标题样式 */
+#contact h2{
+    font-weight: bold; /* 字体加粗 */
+    margin-top: 0; /* 顶部外边距为0 */
+    margin-bottom: 25px; /* 底部外边距为25像素 */
+}
+
+/* 联系我们段落样式 */
+#contact p{
+    line-height:24px; /* 行高为24像素 */
+    margin-bottom:2px; /* 底部外边距为2像素 */
+}
+
+/* 联系我们表单控件样式 */
+#contact .form-control {
+    border: none; /* 无边框 */
+    border-radius: 0; /* 无边框圆角 */
+    height: 50px; /* 高度为50像素 */
+    margin-bottom: 20px; /* 底部外边距为20像素 */
+}
+
+/* 联系我们文本域样式 */
+#contact textarea.form-control{
+    height: auto; /* 高度自动 */
+}
+
+/* 联系我们提交按钮样式 */
+#contact input[type="submit"]{
+    background: #40D2B1; /* 背景颜色为绿色 */
+    color: #fff; /* 字体颜色为白色 */
+    font-weight: bold; /* 字体加粗 */
+    transition: all 0.3s; /* 过渡效果0.3秒 */
+}
+
+/* 联系我们提交按钮悬停样式 */
+#contact input[type="submit"]:hover{
+    background: rgb(44, 142, 120); /* 悬停时背景颜色为深绿色 */
+}
+
+/* 页脚样式 */
+footer{
+    font-weight: 400; /* 字体常规 */
+    text-align: center; /* 文字居中对齐 */
+    padding:20px; /* 内边距为20像素 */
+    color:#999; /* 字体颜色为浅灰色 */
+}
